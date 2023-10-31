@@ -50,7 +50,22 @@ public class DeberCAI {
         Scanner scanner = new Scanner(System.in);
 
         programa.configuracionInicial();
-    }
+        
+                while (programa.intentos < 10) {
+            int[] operandos = programa.generarOperandos();
+            System.out.printf("¿Cuánto es %d + %d? ", operandos[0], operandos[1]);
+            int respuesta = scanner.nextInt();
+            programa.intentos++;
 
+            if (respuesta == operandos[0] + operandos[1]) {
+                programa.aciertos++;
+                programa.generarMensajePositivo();
+            } else {
+                programa.generarMensajeNegativo();
+            }
+        }
+
+    }
+       
 }
 
