@@ -44,5 +44,13 @@ public class DeberCAI {
         System.out.println(mensajes[random.nextInt(mensajes.length)]);
     }
 
+    
+        public static void main(String[] args) {
+        DeberCAI programa = new DeberCAI();
+        Scanner scanner = new Scanner(System.in);
+
+        programa.configuracionInicial();
+    }
+
 }
 
